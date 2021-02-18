@@ -1,3 +1,4 @@
+"use strict";
 /*----- Hamburger menu -----*/
 function openHamburgerMenu(elem) {
     elem.classList.toggle("change");

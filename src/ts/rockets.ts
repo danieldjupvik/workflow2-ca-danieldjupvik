@@ -55,7 +55,7 @@ function getRockets(json: any): void {
 rocketSpan.classList.add("selection-active");
 
 rocketSpan.addEventListener("click", fetchRockets);
-rocketSpan.addEventListener("keypress", function (elem: KeyboardEvent): void {
+rocketSpan.addEventListener("keypress", function (elem: any): void {
   if (elem.key === "Enter") {
     fetchRockets();
   }
@@ -79,7 +79,7 @@ function fetchRockets(): void {
 
 /* --------- Roadster --------*/
 roadsterSpan.addEventListener("click", fetchRoadster);
-roadsterSpan.addEventListener("keypress", function (elem: KeyboardEvent) {
+roadsterSpan.addEventListener("keypress", function (elem: any): void {
   if (elem.key === "Enter") {
     fetchRoadster();
   }
@@ -126,7 +126,7 @@ function fetchRoadster(): void {
 /* --------- Dragons --------*/
 
 dragonsSpan.addEventListener("click", fetchDragons);
-dragonsSpan.addEventListener("keypress", function (elem: KeyboardEvent) {
+dragonsSpan.addEventListener("keypress", function (elem: any): void {
   if (elem.key === "Enter") {
     fetchDragons();
   }

@@ -1,3 +1,4 @@
+"use strict";
 /* --------- Rockets --------*/
 var rocketElemDetails = document.querySelector(".detail-rocket-section");
 var queryString = document.location.search;

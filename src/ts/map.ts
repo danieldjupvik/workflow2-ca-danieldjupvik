@@ -1,4 +1,6 @@
 /*----- Map -----*/
+import * as L from "leaflet";
+
 var map = L.map("map").setView([0, 0], 0);
 setInterval(function () {
   fetch(issUrl)
@@ -12,13 +14,13 @@ setInterval(function () {
       console.log(error);
     });
 
-  function setCoordinates(json) {
+  function setCoordinates(json: any): void {
     var lat = json.iss_position.latitude;
     var lon = json.iss_position.longitude;
 
     iss.setLatLng([lat, lon]);
     isscirc.setLatLng([lat, lon]);
-    map.panTo([lat, lon], (animate = true));
+    map.panTo([lat, lon]);
   }
 }, 5000);
 
@@ -33,13 +35,11 @@ L.tileLayer(
 ).addTo(map);
 
 var ISSIcon = L.icon({
-  alt: alt,
   iconUrl: "https://lasr.danieldjupvik.dev/assets/icons/ISSIcon.png",
   iconSize: [50, 30],
   iconAnchor: [25, 15],
   popupAnchor: [50, 25],
   shadowUrl: "https://lasr.danieldjupvik.dev/assets/icons/ISSIcon_shadow.png",
-  alt: alt,
   shadowSize: [60, 40],
   shadowAnchor: [30, 15],
 });
@@ -53,5 +53,4 @@ var isscirc = L.circle([0, 0], 2200e3, {
   weight: 1,
   fillColor: "#203140",
   fillOpacity: 0.1,
-  alt: alt,
 }).addTo(map);

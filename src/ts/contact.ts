@@ -83,7 +83,7 @@ export function validateNotEmpty(value: string): boolean {
   }
 }
 
-export function validateEmail(email: string): boolean {
+export function validateEmail(email: string): boolean | undefined {
   let regEx = /\S+@\S+\.\S+/;
   if (validateNotEmpty(email)) {
     let checkMail = regEx.test(email);

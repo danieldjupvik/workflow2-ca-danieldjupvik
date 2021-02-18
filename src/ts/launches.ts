@@ -4,7 +4,7 @@ var collapsible = document.getElementsByClassName(
 ) as HTMLCollectionOf<Element>;
 
 for (let index: number = 0; index < collapsible.length; index++) {
-  collapsible[index].addEventListener("click", function (): void {
+  collapsible[index].addEventListener("click", function (this: any): void {
     this.classList.toggle("showContent");
     var content: any = this.nextElementSibling;
     if (content.style.display === "block") {

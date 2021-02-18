@@ -1,3 +1,4 @@
+"use strict";
 /*----- Dynamically update coordinates in DOM -----*/
 var cors2 = "https://noroffcors.herokuapp.com/";
 var issBaseUrl = "http://api.open-notify.org/iss-now.json";

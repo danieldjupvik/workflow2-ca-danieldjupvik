@@ -1,3 +1,4 @@
+"use strict";
 /* --------- Rockets --------*/
 var rocketElem = document.querySelector(".rocket-section");
 var roadsterSpan = document.querySelector(".roadster");

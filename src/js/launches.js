@@ -1,3 +1,4 @@
+"use strict";
 /*----- Toggle collapsible -----*/
 var collapsible = document.getElementsByClassName("collapsible");
 for (var index = 0; index < collapsible.length; index++) {

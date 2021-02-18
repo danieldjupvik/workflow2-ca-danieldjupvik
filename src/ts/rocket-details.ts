@@ -5,7 +5,7 @@ const rocketElemDetails = document.querySelector(
 const queryString: string = document.location.search;
 const params: URLSearchParams = new URLSearchParams(queryString);
 
-let id: string;
+let id: any;
 
 if (params.has("id")) {
   id = params.get("id");
@@ -174,7 +174,7 @@ function roadsterDetails(): void {
 }
 
 /* --------- Dragons --------*/
-let dragonId: string;
+let dragonId: any;
 
 if (params.has("dragon-id")) {
   dragonId = params.get("dragon-id");
