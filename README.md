@@ -1,6 +1,6 @@
 # Workflow 2 - Course Assignment - danieldjupvik
 
-## prerequisites
+## Prerequisites
 
 node v14.15.3 (yarn v1.22.10)
 
