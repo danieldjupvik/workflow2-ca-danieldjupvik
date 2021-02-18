@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/mobile-styling.css" />
+    <link rel="stylesheet" href="./css/desktop-styling.css" />
+    <title>Contact - LASR</title>
+    <meta
+      name="description"
+      content="On this page you can contact me if you have any questions regarding the website or report any bugs or faults on the page. Credits at the bottom. LASR - learn About SpaceX Rockets, upcoming launches and more!"
+    />
+
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Contact - LASR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="On this page you can contact me if you have any questions regarding the website or report any bugs or faults on the page. Credits at the bottom. LASR - learn About SpaceX Rockets, upcoming launches and more!"
+    />
+    <meta
+      property="og:image"
+      content="http://lasr.djupvik.co/assets/metadata/image-meta.png"
+    />
+    <meta property="og:url" content="http://lasr.djupvik.co/contact.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, For Accessibility  -->
+    <meta property="og:site_name" content="Contact - LASR" />
+    <meta name="twitter:image:alt" content="Picture of website logo" />
+
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#415671"
+    />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#f2f2f2" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="topnav">
+          <div class="topnav-maxWidth">
+            <div class="logo-container">
+              <a href="./index.html">
+                <img
+                  class="logo"
+                  src="./assets/logo/LASR-logo.png"
+                  alt="Logo of LASR"
+                />
+              </a>
+            </div>
+            <div id="topnav-container" class="hideMenu">
+              <a class="topnav-links" href="./index.html"
+                ><img
+                  class="icon-desktop"
+                  src="./assets/icons/home.png"
+                  alt="home"
+                />
+                HOME
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/home.png"
+                  alt="home"
+                />
+              </a>
+
+              <a class="topnav-links" href="./launches.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/launches.png"
+                  alt="launches" />
+                LAUNCHES
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/launches.png"
+                  alt="launches"
+              /></a>
+
+              <a class="topnav-links" href="./rockets.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/rockets.png"
+                  alt="rockets" />
+                ROCKETS
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/rockets.png"
+                  alt="rockets"
+              /></a>
+
+              <a class="topnav-links active" href="./contact.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/contact.png"
+                  alt="contact" />
+                CONTACT
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/contact.png"
+                  alt="contact"
+              /></a>
+            </div>
+            <div class="icon-container" onclick="openHamburgerMenu(this)">
+              <a href="javascript:void(0);" aria-label="hamburger icon">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="global-section">
+        <div class="main-backgroundColor">
+          <h1 class="header">Contact me</h1>
+          <div class="contact-container">
+            <p class="contact-paragraph mobile">
+              You can you contact me if you have any questions about the website
+              down here. Most of the content is sourced from spacexdata.com and
+              open-notify.org. Contact me if you see any wrong information or
+              values.
+            </p>
+            <form class="contact-form" id="contactForm">
+              <div class="contact-field">
+                <div class="formrow formrow--row1">
+                  <p class="form-error">Please enter your first name</p>
+                  <label class="formlabel" for="firstName">First name:</label>
+                  <input
+                    id="firstName"
+                    title="firstName"
+                    class="input_box input_box--1"
+                    type="text"
+                    name="firstName"
+                    placeholder="First name"
+                  />
+                </div>
+                <div class="formrow formrow--row2">
+                  <p class="form-error">Please enter your last name</p>
+                  <label class="formlabel" for="lastName">Last name:</label>
+                  <input
+                    id="lastName"
+                    title="lastName"
+                    class="input_box input_box--2"
+                    type="text"
+                    name="lastName"
+                    placeholder="Last name"
+                  />
+                </div>
+                <div class="formrow formrow--row3">
+                  <div class="form-error form-error-invalid">
+                    Please enter a valid email address
+                  </div>
+                  <div class="form-error form-error-empty">
+                    Please enter your email address
+                  </div>
+                  <label class="formlabel" for="email">Email address:</label>
+                  <input
+                    id="email"
+                    title="email"
+                    class="input_box input_box--3"
+                    type="text"
+                    name="email"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="formrow formrow--row4">
+                  <div class="form-error">
+                    The message must be at least 5 characters.
+                  </div>
+                  <label class="formlabel" for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    title="message"
+                    class="input_box input_box--4"
+                    name="message"
+                    placeholder="Message (at least 5 characters)"
+                    style="height: 150px"
+                  ></textarea>
+                </div>
+                <div class="form-valid">
+                  <img src="./assets/icons/check.png" alt="check icon" />
+                </div>
+                <div class="formrow formrow_send">
+                  <button class="send_button" type="submit" aria-label="Send">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
+            <p class="contact-paragraph desktop">
+              You can you contact me if you have any questions about the website
+              down here. Most of the content is sourced from spacexdata.com and
+              open-notify.org. Contact me if you see any wrong information or
+              values.
+            </p>
+          </div>
+          <div class="credits-container">
+            <h2 class="credits-heading">Credits</h2>
+            <ul>
+              <li>
+                Map from
+                <a target="_blank" rel="noreferrer" href="https://leafletjs.com"
+                  >leafletjs.com</a
+                >
+              </li>
+              <li>
+                Images from
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.spacex.com/"
+                  >SpaceX.com</a
+                >
+              </li>
+              <li>
+                API source from
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/r-spacex/SpaceX-API"
+                  >GitHub SpaceX-API</a
+                >
+              </li>
+              <li>
+                Icon made by
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.flaticon.com/authors/freepik"
+                  title="Freepik"
+                  >Freepik</a
+                >
+                from
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.flaticon.com/"
+                  title="Flaticon"
+                  >flaticon.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footernav">
+          <div class="footer-maxWidth">
+            <div class="link-container">
+              <div class="link-section link-section-left">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.spacex.com/"
+                      >SpaceX</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.nasa.gov/"
+                      >NASA</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.spacex.com/webcast"
+                      >Live stream</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-vertical-line"></div>
+              <div class="link-section link-section-right">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://twitter.com/spacex"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.youtube.com/spacex"
+                      >YouTube</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.instagram.com/spacex/"
+                      >Instagram</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="footernav-container">
+              <a class="footernav-links" href="./index.html">HOME</a>
+              <a class="footernav-links" href="./launches.html">LAUNCHES</a>
+              <a class="footernav-links" href="./rockets.html">ROCKETS</a>
+              <a class="footernav-links" href="./contact.html">CONTACT</a>
+            </div>
+            <div>
+              <p class="copyright">
+                Copyright &COPY; LASR 2020. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/menu.js"></script>
+    <script src="./src/contact.js"></script>
+  </body>
+</html>

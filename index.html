@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/mobile-styling.css" />
+    <link rel="stylesheet" href="./css/desktop-styling.css" />
+    <link rel="stylesheet" href="./css/leaflet.css" />
+    <title>LASR</title>
+    <meta
+      name="description"
+      content="LASR - learn About SpaceX Rockets, upcoming launches and more! Where are The International Space Station right now? Who is in space right now? Find out here!"
+    />
+
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="LASR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="LASR - learn About SpaceX Rockets, upcoming launches and more! Where are The International Space Station right now? Who is in space right now? Find out here!"
+    />
+    <meta
+      property="og:image"
+      content="http://lasr.djupvik.co/assets/metadata/image-meta.png"
+    />
+    <meta property="og:url" content="http://lasr.djupvik.co/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, For Accessibility  -->
+    <meta property="og:site_name" content="LASR" />
+    <meta name="twitter:image:alt" content="Picture of website logo" />
+
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#415671"
+    />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#f2f2f2" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="topnav">
+          <div class="topnav-maxWidth">
+            <div class="logo-container">
+              <a href="./index.html">
+                <img
+                  class="logo"
+                  src="./assets/logo/LASR-logo.png"
+                  alt="LASR - Learn About SpaceX Rockets"
+                />
+              </a>
+            </div>
+            <div id="topnav-container" class="hideMenu">
+              <a class="topnav-links active" href="./index.html"
+                ><img
+                  class="icon-desktop"
+                  src="./assets/icons/home.png"
+                  alt="home"
+                />
+                HOME
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/home.png"
+                  alt="home"
+                />
+              </a>
+
+              <a class="topnav-links" href="./launches.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/launches.png"
+                  alt="launches" />
+                LAUNCHES
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/launches.png"
+                  alt="launches"
+              /></a>
+
+              <a class="topnav-links" href="./rockets.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/rockets.png"
+                  alt="rockets" />
+                ROCKETS
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/rockets.png"
+                  alt="rockets"
+              /></a>
+
+              <a class="topnav-links" href="./contact.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/contact.png"
+                  alt="contact" />
+                CONTACT
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/contact.png"
+                  alt="contact"
+              /></a>
+            </div>
+            <div class="icon-container" onclick="openHamburgerMenu(this)">
+              <a href="javascript:void(0);" aria-label="hamburger icon">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="global-section">
+        <div class="hero">
+          <h1 class="header">Live position of ISS</h1>
+          <div class="live-position-container">
+            <p class="LivePosition-paragraph">
+              The International Space Station is moving at close to 28,000 km/h
+              so its location changes really fast! Where is it right now?
+            </p>
+            <div class="map-container">
+              <div class="coordinates">
+                <div class="lati-long">
+                  <span id="latitude">00.0000 ° N</span>
+                  <span id="longitude">00.0000 ° E</span>
+                </div>
+              </div>
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+        <div class="main-backgroundColor">
+          <div class="upcomingLaunches-container">
+            <img
+              class="upcomingLaunches-image mobile"
+              src="./assets/images/falcon-9-homepage-image.jpg"
+              alt="falcon 9 launching "
+            />
+            <img
+              class="upcomingLaunches-image desktop"
+              src="./assets/images/falcon-9-homepage-image-desktop.jpg"
+              alt="falcon 9 launching"
+            />
+            <a class="upcomingLaunches-button" href="./launches.html">
+              Upcoming launches
+            </a>
+          </div>
+          <div class="ISS-container">
+            <h2 class="homepage-heading1">The International Space Station</h2>
+            <p class="homepage-paragraph">
+              The International Space Station (ISS) is a modular space station
+              (habitable artificial satellite) in low Earth orbit. The ISS
+              programme is a multi-national collaborative project between five
+              participating space agencies: NASA (United States), Roscosmos
+              (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).
+            </p>
+            <div class="people-in-space-div">
+              <h3 class="homepage-heading2">People currently in space</h3>
+              <div class="people-in-space">
+                <div class="lds-ellipsis loader-homepage">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="goToRockets-container">
+            <img
+              class="goToRockets-image mobile"
+              src="./assets/images/first-falcon-9-homepage-image.jpg"
+              alt="first launch of falcon 9"
+            />
+            <img
+              class="goToRockets-image desktop"
+              src="./assets/images/first-falcon-9-homepage-image-desktop.jpg"
+              alt="first launch of falcon 9"
+            />
+            <a class="goToRockets-button" href="./rockets.html"> Rockets </a>
+          </div>
+          <div class="about-section">
+            <div class="about-container">
+              <h4 class="homepage-heading1">About SpaceX</h4>
+              <div id="aboutSpaceX" class="homepage-paragraph">
+                <div class="lds-ellipsis loader-homepage">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footernav">
+          <div class="footer-maxWidth">
+            <div class="link-container">
+              <div class="link-section link-section-left">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.spacex.com/"
+                      >SpaceX</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.nasa.gov/"
+                      >NASA</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.spacex.com/webcast"
+                      >Live stream</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-vertical-line"></div>
+              <div class="link-section link-section-right">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://twitter.com/spacex"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.youtube.com/spacex"
+                      >YouTube</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.instagram.com/spacex/"
+                      >Instagram</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="footernav-container">
+              <a class="footernav-links" href="./index.html">HOME</a>
+              <a class="footernav-links" href="./launches.html">LAUNCHES</a>
+              <a class="footernav-links" href="./rockets.html">ROCKETS</a>
+              <a class="footernav-links" href="./contact.html">CONTACT</a>
+            </div>
+            <div>
+              <p class="copyright">
+                Copyright &COPY; LASR 2020. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/menu.js"></script>
+    <script src="./src/script.js"></script>
+    <script src="./src/leaflet.js"></script>
+    <script src="./src/map.js"></script>
+  </body>
+</html>

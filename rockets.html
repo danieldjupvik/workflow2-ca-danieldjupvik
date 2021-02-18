@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/mobile-styling.css" />
+    <link rel="stylesheet" href="./css/desktop-styling.css" />
+    <title>Rockets - LASR</title>
+    <meta
+      name="description"
+      content="On this page you can see the different SpaceX spacecrafts. LASR - learn About SpaceX Rockets, upcoming launches and more!"
+    />
+
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Rockets - LASR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="On this page you can see the different SpaceX spacecrafts. LASR - learn About SpaceX Rockets, upcoming launches and more!"
+    />
+    <meta
+      property="og:image"
+      content="http://lasr.djupvik.co/assets/metadata/image-meta.png"
+    />
+    <meta property="og:url" content="http://lasr.djupvik.co/rockets.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, For Accessibility  -->
+    <meta property="og:site_name" content="Rockets - LASR" />
+    <meta name="twitter:image:alt" content="Picture of website logo" />
+
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./favicon/safari-pinned-tab.svg"
+      color="#415671"
+    />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#f2f2f2" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="topnav">
+          <div class="topnav-maxWidth">
+            <div class="logo-container">
+              <a href="./index.html">
+                <img
+                  class="logo"
+                  src="./assets/logo/LASR-logo.png"
+                  alt="Logo of LASR"
+                />
+              </a>
+            </div>
+            <div id="topnav-container" class="hideMenu">
+              <a class="topnav-links" href="./index.html"
+                ><img
+                  class="icon-desktop"
+                  src="./assets/icons/home.png"
+                  alt="home"
+                />
+                HOME
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/home.png"
+                  alt="home"
+                />
+              </a>
+
+              <a class="topnav-links" href="./launches.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/launches.png"
+                  alt="launches" />
+                LAUNCHES
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/launches.png"
+                  alt="launches"
+              /></a>
+
+              <a class="topnav-links active" href="./rockets.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/rockets.png"
+                  alt="rockets" />
+                ROCKETS
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/rockets.png"
+                  alt="rockets"
+              /></a>
+
+              <a class="topnav-links" href="./contact.html">
+                <img
+                  class="icon-desktop"
+                  src="./assets/icons/contact.png"
+                  alt="contact" />
+                CONTACT
+                <img
+                  class="icon-mobile"
+                  src="./assets/icons/contact.png"
+                  alt="contact"
+              /></a>
+            </div>
+            <div class="icon-container" onclick="openHamburgerMenu(this)">
+              <a href="javascript:void(0);" aria-label="hamburger icon">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="global-section">
+        <div class="main-backgroundColor">
+          <h1 class="header">SpaceX’s rockets</h1>
+          <div class="intro-rockets-container">
+            <p class="intro-rockets">
+              Space Exploration Technologies Corp., trading as SpaceX, is a
+              private American aerospace manufacturer and space transportation
+              services company headquartered in Hawthorne, California. It was
+              founded in 2002 by Elon Musk with the goal of reducing space
+              transportation costs to enable the colonization of Mars. SpaceX
+              has developed several launch vehicles and the Dragon spacecraft.
+            </p>
+            <img
+              class="PCrocket-img"
+              src="./assets/icons/PC-rocket.png"
+              alt="PC rocket"
+            />
+          </div>
+          <div class="selection-container">
+            <span tabindex="0" class="rockets">Rockets</span>
+            <span tabindex="0" class="roadster">Roadster</span>
+            <span tabindex="0" class="dragons">Dragons</span>
+          </div>
+
+          <div class="rocket-section">
+            <div class="rocket-loader-div">
+              <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footernav">
+          <div class="footer-maxWidth">
+            <div class="link-container">
+              <div class="link-section link-section-left">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.spacex.com/"
+                      >SpaceX</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.nasa.gov/"
+                      >NASA</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.spacex.com/webcast"
+                      >Live stream</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-vertical-line"></div>
+              <div class="link-section link-section-right">
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://twitter.com/spacex"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.youtube.com/spacex"
+                      >YouTube</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.instagram.com/spacex/"
+                      >Instagram</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="footernav-container">
+              <a class="footernav-links" href="./index.html">HOME</a>
+              <a class="footernav-links" href="./launches.html">LAUNCHES</a>
+              <a class="footernav-links" href="./rockets.html">ROCKETS</a>
+              <a class="footernav-links" href="./contact.html">CONTACT</a>
+            </div>
+            <div>
+              <p class="copyright">
+                Copyright &COPY; LASR 2020. All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/menu.js"></script>
+    <script src="./src/rockets.js"></script>
+  </body>
+</html>
