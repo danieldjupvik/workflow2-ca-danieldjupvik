@@ -12,7 +12,7 @@ node v14.15.3 (yarn v1.22.10)
 
 Option 1 (install Parcel global on your computer):
 
-- `yarn global add parcel-bundler`
+- run in terminal `yarn global add parcel-bundler`
 - cd into workflow2-ca-danieldjupvik folder
 - run `parcel *.html`
 - website should be accessible on `localhost:1234`
