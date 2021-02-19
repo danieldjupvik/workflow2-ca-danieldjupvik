@@ -1,6 +1,6 @@
 name: automerge
 on:
-  pull_request:
+  push:
     types:
       - labeled
       - unlabeled
