@@ -1,6 +1,7 @@
 # Workflow 2 - Course Assignment - danieldjupvik
 
 <div align="center">
+<br />
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://lasr.danieldjupvik.dev/)
 <br />
