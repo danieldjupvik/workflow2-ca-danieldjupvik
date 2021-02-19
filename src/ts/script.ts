@@ -3,19 +3,28 @@ const cors2: string = "https://noroffcors.herokuapp.com/";
 const issBaseUrl: string = "http://api.open-notify.org/iss-now.json";
 const issUrl: string = cors2 + issBaseUrl;
 
+interface issFetch {
+  iss_position: {
+    latitude: string;
+    longitude: string;
+  };
+  message: string;
+  timestamp: number;
+}
+
 function updateFetch(): void {
   fetch(issUrl)
     .then(function (Response) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: issFetch) {
       updateCoordinates(json);
     })
     .catch(function (error) {
       console.log(error);
     });
 
-  function updateCoordinates(json: any): void {
+  function updateCoordinates(json: issFetch): void {
     const latiLongElem = document.querySelector(".lati-long") as HTMLElement;
     latiLongElem.innerHTML = `<span id="latitude">${json.iss_position.latitude} ° N</span> <span id="longitude">${json.iss_position.longitude} ° E</span>`;
   }

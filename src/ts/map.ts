@@ -1,6 +1,10 @@
 /*----- Map -----*/
 import * as L from "leaflet";
 
+const cors2: string = "https://noroffcors.herokuapp.com/";
+const issBaseUrl: string = "http://api.open-notify.org/iss-now.json";
+const issUrl: string = cors2 + issBaseUrl;
+
 var map = L.map("map").setView([0, 0], 0);
 setInterval(function () {
   fetch(issUrl)
