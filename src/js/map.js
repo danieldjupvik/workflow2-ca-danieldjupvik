@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 /*----- Map -----*/
 var L = require("leaflet");
+var cors2 = "https://noroffcors.herokuapp.com/";
+var issBaseUrl = "http://api.open-notify.org/iss-now.json";
+var issUrl = cors2 + issBaseUrl;
 var map = L.map("map").setView([0, 0], 0);
 setInterval(function () {
     fetch(issUrl)

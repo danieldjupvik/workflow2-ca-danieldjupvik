@@ -8,6 +8,6 @@ test("test if valid email", function () {
   expect(validateEmail("daniel@daniel.no")).toBe(true);
 });
 
-test("validate Length", function () {
+test("validate Length test", function () {
   expect(validateLength("Hallo World")).toBe(false);
 });
