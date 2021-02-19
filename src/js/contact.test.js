@@ -7,3 +7,6 @@ test("test if string is empty", function () {
 test("test if valid email", function () {
     expect(contact_1.validateEmail("daniel@daniel.no")).toBe(true);
 });
+test("validate Length", function () {
+    expect(contact_1.validateLength("Hallo World")).toBe(false);
+});
