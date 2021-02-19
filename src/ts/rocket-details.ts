@@ -5,7 +5,7 @@ const rocketElemDetails = document.querySelector(
 const queryString: string = document.location.search;
 const params: URLSearchParams = new URLSearchParams(queryString);
 
-let id: any;
+let id: string | null;
 
 if (params.has("id")) {
   id = params.get("id");
@@ -19,13 +19,13 @@ function rocketDetails(): void {
   const url: string = cors + baseUrl + id;
 
   fetch(url)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getRocketDetails(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       document.location.href = "error.html";
     });
 
@@ -129,13 +129,13 @@ function roadsterDetails(): void {
   const url: string = cors + baseUrl;
 
   fetch(url)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getRoadsterDetails(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       document.location.href = "error.html";
     });
 
@@ -189,13 +189,13 @@ function dragonDetails(): void {
   const url: string = cors + baseUrl + dragonId;
 
   fetch(url)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getDragonDetails(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       document.location.href = "error.html";
     });
 

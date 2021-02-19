@@ -8,13 +8,13 @@ const issUrl: string = cors2 + issBaseUrl;
 var map = L.map("map").setView([0, 0], 0);
 setInterval(function () {
   fetch(issUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       setCoordinates(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       console.log(error);
     });
 

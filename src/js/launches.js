@@ -1,4 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.timeConverter = void 0;
+global.fetch = require("node-fetch");
 /*----- Toggle collapsible -----*/
 var collapsible = document.getElementsByClassName("collapsible");
 for (var index = 0; index < collapsible.length; index++) {
@@ -25,7 +28,7 @@ fetch(upcomingUrl)
     getUpcomingLaunches(json);
 })
     .catch(function (error) {
-    console.log(error);
+    // console.log(error);
 });
 function getUpcomingLaunches(json) {
     var timelineElem = document.querySelector(".timeline");
@@ -70,6 +73,7 @@ function timeConverter(UNIX_timestamp) {
     var time = date + " " + month + " " + year;
     return time;
 }
+exports.timeConverter = timeConverter;
 /*----- Past launches Custom Length -----*/
 var pastBaseUrl = "https://api.spacexdata.com/v3/launches/past?order=desc";
 var pastUrl = corsLaunches + pastBaseUrl;
@@ -81,7 +85,7 @@ fetch(pastUrl)
     getRecentLaunchesCustomLength(json);
 })
     .catch(function (error) {
-    console.log(error);
+    // console.log(error);
 });
 function getRecentLaunchesCustomLength(json) {
     var recentTimelineElem = document.querySelector(".recent-timeline");
@@ -113,7 +117,7 @@ function recentAddLeftAndRight() {
 /*----- View All Past launches -----*/
 var viewMoreButton = document.querySelector(".view-more");
 var viewLessButton = document.querySelector(".view-less");
-viewMoreButton.addEventListener("click", function () {
+viewMoreButton === null || viewMoreButton === void 0 ? void 0 : viewMoreButton.addEventListener("click", function () {
     fetch(pastUrl)
         .then(function (Response) {
         return Response.json();
@@ -122,7 +126,7 @@ viewMoreButton.addEventListener("click", function () {
         getRecentLaunchesAll(json);
     })
         .catch(function (error) {
-        console.log(error);
+        // console.log(error);
     });
     function getRecentLaunchesAll(json) {
         var recentTimelineElem = document.querySelector(".recent-timeline");
@@ -146,7 +150,7 @@ viewMoreButton.addEventListener("click", function () {
     loader[1].classList.remove("hidden");
 });
 /*----- View Less Past launches Custom Length -----*/
-viewLessButton.addEventListener("click", function () {
+viewLessButton === null || viewLessButton === void 0 ? void 0 : viewLessButton.addEventListener("click", function () {
     fetch(pastUrl)
         .then(function (Response) {
         return Response.json();
@@ -155,7 +159,7 @@ viewLessButton.addEventListener("click", function () {
         getRecentLaunchesCustomLength(json);
     })
         .catch(function (error) {
-        console.log(error);
+        // console.log(error);
     });
     viewMoreButton.style.display = "block";
     viewLessButton.style.display = "none";
@@ -196,7 +200,7 @@ fetch(nextLaunchUrl)
     getUpcomingDate(json);
 })
     .catch(function (error) {
-    console.log(error);
+    // console.log(error);
 });
 function getUpcomingDate(json) {
     setInterval(function () {
