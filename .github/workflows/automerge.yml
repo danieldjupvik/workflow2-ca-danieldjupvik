@@ -1,18 +1,9 @@
 name: automerge
 on:
   push:
-    types:
-      - labeled
-      - unlabeled
-      - synchronize
-      - opened
-      - edited
-      - ready_for_review
-      - reopened
-      - unlocked
-  pull_request_review:
-    types:
-      - submitted
+    branches: [dev]
+  pull_request:
+    branches: [dev]
   check_suite:
     types:
       - completed
