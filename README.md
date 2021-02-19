@@ -32,3 +32,8 @@ node v14.15.3 (yarn v1.22.10)
 ## GitHub Actions Config
 
 - GitHub Actions is configured to merge dev branch into main branch if Jest tests success without faults when you push or add a pull request on dev branch.
+
+### License
+
+- [MIT LICENSE](https://opensource.org/licenses/MIT)
+- Copyright 2021
