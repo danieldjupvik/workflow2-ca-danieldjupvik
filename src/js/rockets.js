@@ -78,7 +78,6 @@ function fetchRoadster() {
         console.log(error);
     });
     function getRoadster(json) {
-        console.log(json);
         var html = "";
         html += "\n        <div class=\"rocket-box\">\n          <a href=\"rocket-details.html?type=roadster\">\n           <img class=\"rocket-img\" src=\"" + json.flickr_images[0] + "\" alt=\"" + json.name + "\">\n          </a>\n          <h2 class=\"rocket-heading\">" + json.name + "</h2>\n          <p class=\"rocket-description\">" + json.details + "</p>\n          <div class=\"readMore-button-container\">\n            <a href=\"rocket-details.html?type=roadster\">\n            <div class=\"readMore-button\">Read more</div>\n            </a>\n          </div>\n        </div>\n        ";
         rocketElem.innerHTML = html;

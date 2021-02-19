@@ -17,7 +17,7 @@ formElem?.addEventListener("submit", function (event) {
   const emailValue: string = emailElem.value;
   const messageValue: string = messageElem.value;
 
-  let isValid = true;
+  let isValid: boolean = true;
 
   if (validateNotEmpty(firstNameValue) === false) {
     (<HTMLElement>invalidForm[0]).style.display = "block";
@@ -74,7 +74,7 @@ export function validateLength(value: any): boolean {
 }
 
 export function validateNotEmpty(value: string): boolean {
-  let trimmedValue = value.trim();
+  let trimmedValue: string = value.trim();
 
   if (trimmedValue.length > 0) {
     return true;
@@ -84,9 +84,9 @@ export function validateNotEmpty(value: string): boolean {
 }
 
 export function validateEmail(email: string): boolean | undefined {
-  let regEx = /\S+@\S+\.\S+/;
+  let regEx: RegExp = /\S+@\S+\.\S+/;
   if (validateNotEmpty(email)) {
-    let checkMail = regEx.test(email);
+    let checkMail: boolean = regEx.test(email);
     return checkMail;
   }
 }

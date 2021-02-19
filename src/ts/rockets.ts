@@ -101,8 +101,6 @@ function fetchRoadster(): void {
     });
 
   function getRoadster(json: any): void {
-    console.log(json);
-
     var html: string = "";
     html += `
         <div class="rocket-box">
