@@ -28,3 +28,7 @@ Option 2 (if you cannot/wont install Parcel on your computer);
 
 - cd into workflow2-ca-danieldjupvik folder
 - run `yarn test`
+
+## GitHub Actions Config
+
+- GitHub Actions is configured to merge dev branch into main branch if Jest tests success without faults.
