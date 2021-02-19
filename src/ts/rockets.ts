@@ -8,13 +8,13 @@ const rocketBaseUrl: string = "https://api.spacexdata.com/v3/rockets";
 const rocketUrl: string = cors + rocketBaseUrl;
 
 fetch(rocketUrl)
-  .then(function (Response) {
+  .then(function (Response: any) {
     return Response.json();
   })
-  .then(function (json) {
+  .then(function (json: any) {
     getRockets(json);
   })
-  .catch(function (error) {
+  .catch(function (error: any) {
     console.log(error);
   });
 
@@ -63,13 +63,13 @@ rocketSpan.addEventListener("keypress", function (elem: any): void {
 
 function fetchRockets(): void {
   fetch(rocketUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getRockets(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       console.log(error);
     });
   rocketSpan.classList.add("selection-active");
@@ -90,13 +90,13 @@ function fetchRoadster(): void {
   const roadsterUrl: string = cors + roadsterBaseUrl;
 
   fetch(roadsterUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getRoadster(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       console.log(error);
     });
 
@@ -139,13 +139,13 @@ function fetchDragons(): void {
   const dragonsUrl: string = cors + dragonsBaseUrl;
 
   fetch(dragonsUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getDragons(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       console.log(error);
     });
 

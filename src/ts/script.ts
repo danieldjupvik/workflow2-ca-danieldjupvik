@@ -14,13 +14,13 @@ interface issFetch {
 
 function updateFetch(): void {
   fetch(issUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
     .then(function (json: issFetch) {
       updateCoordinates(json);
     })
-    .catch(function (error) {
+    .catch(function (error: any) {
       console.log(error);
     });
 
@@ -37,13 +37,13 @@ const peopleBaseUrl: string = "http://api.open-notify.org/astros.json";
 const peopleUrl: string = cors2 + peopleBaseUrl;
 
 fetch(peopleUrl)
-  .then(function (Response) {
+  .then(function (Response: any) {
     return Response.json();
   })
-  .then(function (json) {
+  .then(function (json: any) {
     peopleInSpace(json);
   })
-  .catch(function (error) {
+  .catch(function (error: any) {
     console.log(error);
   });
 
@@ -68,13 +68,13 @@ const spaceXBaseUrl: string = "https://api.spacexdata.com/v3/info";
 const spacexUrl: string = cors2 + spaceXBaseUrl;
 
 fetch(spacexUrl)
-  .then(function (Response) {
+  .then(function (Response: any) {
     return Response.json();
   })
-  .then(function (json) {
+  .then(function (json: any) {
     aboutSpaceX(json);
   })
-  .catch(function (error) {
+  .catch(function (error: any) {
     console.log(error);
   });
 

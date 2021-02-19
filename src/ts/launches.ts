@@ -1,3 +1,5 @@
+global.fetch = require("node-fetch");
+
 /*----- Toggle collapsible -----*/
 var collapsible = document.getElementsByClassName(
   "collapsible"
@@ -22,14 +24,14 @@ const upcomingBaseUrl: string =
 const upcomingUrl: string = corsLaunches + upcomingBaseUrl;
 
 fetch(upcomingUrl)
-  .then(function (Response) {
+  .then(function (Response: any) {
     return Response.json();
   })
-  .then(function (json) {
+  .then(function (json: any) {
     getUpcomingLaunches(json);
   })
-  .catch(function (error) {
-    console.log(error);
+  .catch(function (error: any) {
+    // console.log(error);
   });
 
 function getUpcomingLaunches(json: any): void {
@@ -69,7 +71,7 @@ function upcomingAddLeftAndRight(): void {
   }
 }
 
-function timeConverter(UNIX_timestamp: any): string {
+export function timeConverter(UNIX_timestamp: number): string {
   var a: Date = new Date(UNIX_timestamp * 1000);
   var months: string[] = [
     "Jan",
@@ -98,14 +100,14 @@ const pastBaseUrl: string =
 const pastUrl: string = corsLaunches + pastBaseUrl;
 
 fetch(pastUrl)
-  .then(function (Response) {
+  .then(function (Response: any) {
     return Response.json();
   })
-  .then(function (json) {
+  .then(function (json: any) {
     getRecentLaunchesCustomLength(json);
   })
-  .catch(function (error) {
-    console.log(error);
+  .catch(function (error: any) {
+    // console.log(error);
   });
 
 function getRecentLaunchesCustomLength(json: any): void {
@@ -158,16 +160,16 @@ function recentAddLeftAndRight(): void {
 const viewMoreButton = document.querySelector(".view-more") as Element;
 const viewLessButton = document.querySelector(".view-less") as Element;
 
-viewMoreButton.addEventListener("click", function (): void {
+viewMoreButton?.addEventListener("click", function (): void {
   fetch(pastUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getRecentLaunchesAll(json);
     })
-    .catch(function (error) {
-      console.log(error);
+    .catch(function (error: any) {
+      // console.log(error);
     });
 
   function getRecentLaunchesAll(json: any): void {
@@ -211,16 +213,16 @@ viewMoreButton.addEventListener("click", function (): void {
 });
 
 /*----- View Less Past launches Custom Length -----*/
-viewLessButton.addEventListener("click", function (): void {
+viewLessButton?.addEventListener("click", function (): void {
   fetch(pastUrl)
-    .then(function (Response) {
+    .then(function (Response: any) {
       return Response.json();
     })
-    .then(function (json) {
+    .then(function (json: any) {
       getRecentLaunchesCustomLength(json);
     })
-    .catch(function (error) {
-      console.log(error);
+    .catch(function (error: any) {
+      // console.log(error);
     });
 
   (<HTMLElement>viewMoreButton).style.display = "block";
@@ -228,7 +230,7 @@ viewLessButton.addEventListener("click", function (): void {
 });
 
 /*----- Countdown to next launch -----*/
-function timeConverterFull(UNIX_timestamp: any): string {
+function timeConverterFull(UNIX_timestamp: number): string {
   var a: Date = new Date(UNIX_timestamp * 1000);
   var months: string[] = [
     "Jan",
@@ -259,14 +261,14 @@ const nextLaunchBaseUrl: string = "https://api.spacexdata.com/v3/launches/next";
 const nextLaunchUrl: string = corsLaunches + nextLaunchBaseUrl;
 
 fetch(nextLaunchUrl)
-  .then(function (Response) {
+  .then(function (Response: any) {
     return Response.json();
   })
-  .then(function (json) {
+  .then(function (json: any) {
     getUpcomingDate(json);
   })
-  .catch(function (error) {
-    console.log(error);
+  .catch(function (error: any) {
+    // console.log(error);
   });
 
 function getUpcomingDate(json: any): void {
