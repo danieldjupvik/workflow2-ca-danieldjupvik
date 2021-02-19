@@ -1,5 +1,10 @@
 name: automerge
 on:
+  push:
+      branches: [dev]
+    pull_request:
+      branches: [dev]
+      
   pull_request:
     types:
       - labeled
