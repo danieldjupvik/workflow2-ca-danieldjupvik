@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.validateEmail = exports.validateNotEmpty = void 0;
+exports.validateEmail = exports.validateNotEmpty = exports.validateLength = void 0;
 /* ----- Validate contact form ------ */
 var formElem = document.getElementById("contactForm");
 var firstNameElem = document.getElementById("firstName");
@@ -70,6 +70,7 @@ function validateLength(value) {
         return false;
     }
 }
+exports.validateLength = validateLength;
 function validateNotEmpty(value) {
     var trimmedValue = value.trim();
     if (trimmedValue.length > 0) {

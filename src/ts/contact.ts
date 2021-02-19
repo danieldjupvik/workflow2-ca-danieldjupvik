@@ -65,7 +65,7 @@ formElem?.addEventListener("submit", function (event) {
 });
 
 // Functions to check validation
-function validateLength(value: any): boolean {
+export function validateLength(value: any): boolean {
   if (value.length < 5) {
     return true;
   } else {
