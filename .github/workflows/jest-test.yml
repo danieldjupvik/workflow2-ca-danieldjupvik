@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Test Jest
+name: Test with Jest and merged to main if success
 
 # Controls when the action will run.
 on:
