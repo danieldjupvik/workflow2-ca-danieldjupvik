@@ -1,5 +1,7 @@
 # Workflow 2 - Course Assignment - danieldjupvik
 
+In this course assignment you will be tasked to modernize an existing website. So that you can ship bug free code.
+
 ## Prerequisites
 
 node v14.15.3 (yarn v1.22.10)
