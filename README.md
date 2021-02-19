@@ -6,8 +6,9 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://lasr.danieldjupvik.dev/)
 <br />
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://lasr.danieldjupvik.dev/)
 <br />
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5b677e607def4466b8084eb76be4f0d7)](https://google.no) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/InternationalAdvice0/workflow2-ca-danieldjupvik/network/dependencies) [![Website lasr.danieldjupvik.dev](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://lasr.danieldjupvik.dev) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/InternationalAdvice0/workflow2-ca-danieldjupvik/blob/dev/LICENSE)
 
 </div>
