@@ -9,5 +9,5 @@ test("test if valid email", function () {
 });
 
 test("validate Length", function () {
-  expect(validateLength("Hallo World")).toBe(false);
+  expect(validateLength("Hallo World")).toBe(true);
 });
