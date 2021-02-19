@@ -30,14 +30,14 @@ node v14.15.3 (yarn v1.22.10)
 - run in terminal `yarn global add parcel-bundler`
 - cd into `workflow2-ca-danieldjupvik` folder
 - run `parcel *.html`
-- website should be accessible on `localhost:1234`
+- website should be accessible on `localhost:1234/index.html`
 
 **Option 2** (if you cannot/wont install Parcel on your computer);
 
 - cd into `workflow2-ca-danieldjupvik` folder
 - To run in development mode `yarn dev`
 - To run in production mode `yarn build`
-- website should be accessible on `localhost:1234`
+- website should be accessible on `localhost:1234/index.html`
 
 ## Test with Jest
 
