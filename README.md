@@ -8,7 +8,7 @@ node v14.15.3 (yarn v1.22.10)
 
 - install packages with yarn `yarn install`
 
-### Run Dev Server
+## Run Dev Server
 
 Option 1 (install Parcel global on your computer):
 
