@@ -5,7 +5,7 @@ const rocketElemDetails = document.querySelector(
 const queryString: string = document.location.search;
 const params: URLSearchParams = new URLSearchParams(queryString);
 
-let id: string | null;
+let id: any;
 
 if (params.has("id")) {
   id = params.get("id");

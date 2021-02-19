@@ -61,7 +61,9 @@ function getUpcomingLaunches(json: any): void {
 }
 
 function upcomingAddLeftAndRight(): void {
-  var container = document.getElementsByClassName("upcoming container");
+  var container = document.getElementsByClassName(
+    "upcoming container"
+  ) as HTMLCollectionOf<Element>;
   for (let index: number = 0; index < container.length; index++) {
     if (index % 2 == 0) {
       container[index].classList.add("left");
